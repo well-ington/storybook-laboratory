@@ -3,19 +3,19 @@ import styled from 'styled-components';
 
 const MainContainer = styled.div`
   position: relative;
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
   border-radius: 5px;
 	display: flex;
 	margin: 0.4em;
 	flex-direction: column-reverse;
 	align-items: center;
 	justify-content: center;
-	width: 16rem;
+	width: 12rem;
 	background-color: #eee;
 	box-shadow: 2px 2px 4px #00000055;
 	& > img {
-		width: 160px;
-		height: 160px;
+		width: 12rem;
+		height: 12rem;
 		opacity: 0.5;
 		transition: 1s;
 		background-color: #eeeeee;
