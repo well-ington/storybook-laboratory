@@ -1,6 +1,6 @@
-import React, { useMemo } from 'react';
-import styled from 'styled-components';
-import OptionsButton from './OptionsButton';
+import React, { useMemo } from 'react'
+import styled from 'styled-components'
+import OptionsButton from './OptionsButton'
 
 const MainContainer = styled.div`
   font-size: 62.5%;
@@ -50,32 +50,26 @@ const MainContainer = styled.div`
     right: 13.6em;
     bottom: 0.7em;
   }
-`;
+`
 
 const Card = props => {
-	useMemo(() => [props.title], [props]);
-	return (
-		<MainContainer className={`${props.list && 'list-mode'} ${props.color && props.color}`}>
-			<p className="title">
-				{props.title}
-			</p>
-			<span className="description">
-				{props.description}
-			</span>
-			<p className="author">
-				{props.author}
-			</p>
-			<span className="published">
-				{props.published}
-			</span>
-			<img src={props.image} />
-			<div className="action-button">
-				<OptionsButton>
-					<p>some options</p>
-				</OptionsButton>
-			</div>
-		</MainContainer>
-	);
-};
+  useMemo(() => [props.title], [props])
+  return (
+    <MainContainer
+      className={`${props.list && 'list-mode'} ${props.color && props.color}`}
+    >
+      <p className='title'>{props.title}</p>
+      <span className='description'>{props.description}</span>
+      <p className='author'>{props.author}</p>
+      <span className='published'>{props.published}</span>
+      <img src={props.image} />
+      <div className='action-button'>
+        <OptionsButton>
+          <p>some options</p>
+        </OptionsButton>
+      </div>
+    </MainContainer>
+  )
+}
 
-export default Card;
+export default Card

@@ -23,7 +23,8 @@ storiesOf('Card', module)
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       <BlogCard
         type='blog'
-        list color="blue"
+        list
+        color='blue'
         image={`https://picsum.photos/${Math.floor(Math.random() * 150) + 150}`}
         title='Lorem Ipsum'
         author='Giselle Laranja'
@@ -37,7 +38,8 @@ storiesOf('Card', module)
       ></BlogCard>
       <BlogCard
         type='blog'
-        list color="red"
+        list
+        color='red'
         image={`https://picsum.photos/${Math.floor(Math.random() * 150) + 150}`}
         title='Lorem Ipsum'
         author='Giselle Laranja'
@@ -51,7 +53,8 @@ storiesOf('Card', module)
       ></BlogCard>
       <BlogCard
         type='blog'
-        list color="orange"
+        list
+        color='orange'
         image={`https://picsum.photos/${Math.floor(Math.random() * 150) + 150}`}
         title='Lorem Ipsum'
         author='Giselle Laranja'
@@ -65,5 +68,3 @@ storiesOf('Card', module)
       ></BlogCard>
     </div>
   ))
-
-  
