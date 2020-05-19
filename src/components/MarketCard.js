@@ -35,17 +35,14 @@ const MainContainer = styled.div`
 
 const TextContainer = styled.div`
   font-family: Heveltica, Arial, Verdana;
-  &.marketplace {
-    top: 5em;
-    text-align: center;
+    top: 5em;    
     & > h4 {        
-        // padding: 0.5em ;
         text-transform: uppercase;        
         margin-top: 10px;
         color: hsl(255, 10%, 30%);
         padding: 0 0.2em;
         font-size: 1.4em;
-        letter-spacing: 1px
+        letter-spacing: 1px;
         text-align: left;
       }
     & > p {
@@ -56,7 +53,7 @@ const TextContainer = styled.div`
       font-weight: 300;    
       color: hsl(225, 10%, 25%);
      }
-    & > span {
+    & > .price {
       position: absolute;
       font-size: 32px;
       right: 0.2em;
@@ -75,46 +72,13 @@ const TextContainer = styled.div`
         color: hsl(225, 15%, 15%);
         position: absolute;
         left: 0.5em;
-        bottom 0;
+        bottom: 0;
         & span {
           color: hsl(225, 15%, 45%);
           margin-top: -1em;
         }
-      }
-  }
+      } 
   
-  &.blog {
-    width: calc(450px - 166px);
-    margin-left: 0.4em;
-    & > h4 {
-        margin-top: 0;
-        color: hsl(255, 10%, 30%);
-        font-size: 14px;
-        letter-spacing: 1px;
-      }
-    & > p {
-        margin-top: -1.2em;
-        font-weight: 300;
-        font-size: 12px;
-        font-weight: 300;    
-        color: hsl(225, 10%, 25%);
-        text-align: justify;
-        position: relative;
-      }
-    & > div {
-        display: flex;
-        flex-direction: column;
-        font-size: 12px;
-        color: hsl(225, 15%, 15%);
-        position: absolute;
-        left: 0.5em;
-        bottom 0;
-        & span {
-          color: hsl(225, 15%, 45%);
-          margin-top: -1em;
-        }
-      }
-  }  
 `;
 
 const ActionContainer = styled.div`
@@ -139,19 +103,9 @@ const MarketCard = props => {
 						{props.description}
 					</p>}
 				{props.price &&
-					<span>
+					<span className="price">
 						${props.price.toFixed(2)}
-					</span>}
-				{props.author &&
-					props.published &&
-					<div>
-						<p>
-							{props.author}
-						</p>
-						<span>
-							{props.published}
-						</span>
-					</div>}
+					</span>}			
 			</TextContainer>
 			<img src={props.image} />
 		</MainContainer>
