@@ -35,10 +35,11 @@ const ButtonContainer = styled.div`
 	font-family: Helvetica, sans-serif, apple-system;
 	display: inline-block;
 	font-size: 18px;
+	text-transform: uppercase;
 	&.btn-primary {
 		background-color: hsl(265, 80%, 45%);
 		box-shadow: 2px 2px 4px #00000075;
-		color: white;
+		color: white;		
 		border: 1px solid #00000025;
 		&.btn-color-red {
 			background-color: hsl(350, 70%, 45%);
