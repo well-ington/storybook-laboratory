@@ -17,11 +17,11 @@ describe('Button', () => {
     });
     it('Render small primary without crash', () => {
         const wrapped = shallow(<Button type="primary" small>Button</Button>);
-        expect(wrapped.text()).toEqual('Button');
+        expect(wrapped.find('.btn-small').length).toEqual(1);
     });
     it('Render medium primary without crash', () => {
         const wrapped = shallow(<Button type="primary" medium>Button</Button>);
-        expect(wrapped.text()).toEqual('Button');
+        expect(wrapped.find('.btn-medium').length).toEqual(1);
     });
     it('Render large primary without crash', () => {
         const wrapped = shallow(<Button type="primary" large>Button</Button>);
@@ -29,15 +29,15 @@ describe('Button', () => {
     });
     it('Render rounded primary without crash', () => {
         const wrapped = shallow(<Button type="primary" rounded>Button</Button>);
-        expect(wrapped.text()).toEqual('Button');
+        expect(wrapped.find('.btn-rounded-full').length).toEqual(1);
     });
     it('Render red primary without crash', () => {
         const wrapped = shallow(<Button type="primary" color="red">Button</Button>);
-        expect(wrapped.text()).toEqual('Button');
+        expect(wrapped.find('.btn-color-red').length).toEqual(1);
     });
     it('Render unavailable color primary without crash', () => {
         const wrapped = shallow(<Button type="primary" color="asfsfggg">Button</Button>);
-        expect(wrapped.text()).toEqual('Button');
+        expect(wrapped.find('.btn-color-asfsfggg').length).toEqual(1);
     });
     it('Render loading primary static without crash', () => {
         const wrapped = shallow(<Button type="primary" loading></Button>);
