@@ -71,8 +71,7 @@ const ButtonContainer = styled.div`
 
 	&.btn-text {
 		background-color: transparent;
-		border: transparent;
-		color: hsl(265, 40%, 45%);
+		border: transparent;		
 		&.btn-color-red {
 			color: hsl(350, 70%, 45%);
 		}
@@ -82,6 +81,10 @@ const ButtonContainer = styled.div`
 		&.btn-color-orange {
 			color: hsl(25, 70%, 55%);
 		}
+		&.btn-color-blue {
+			color: hsl(225, 70%, 55%);
+		}
+		color: hsl(265, 40%, 45%);
 	}
 
 	&.btn-small {
@@ -119,10 +122,10 @@ const Button = props => {
 	return (
 		<ButtonContainer
 			className={`btn-${props.type ? props.type : 'primary'} 
-    btn-${props.small ? 'small' : props.medium ? 'medium' : 'large'}
-    btn-${props.rounded ? 'rounded-full' : 'rounded-lg'}
-    btn-color-${props.color}
-    btn-${props.disabled ? 'off' : 'on'}`}
+			btn-${props.small ? 'small' : props.medium ? 'medium' : 'large'}
+			btn-${props.rounded ? 'rounded-full' : 'rounded-lg'}
+			btn-color-${props.color}
+			btn-${props.disabled ? 'off' : 'on'}`}
 		>
 			{props.loading && <LoadingIcon className={`${props.animated && 'animated'} ${props.type}`} />}
 			{props.children}

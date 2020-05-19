@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from 'styled-components';
 
 const AlertContainer = styled.div`
@@ -81,6 +81,7 @@ const AlertContainer = styled.div`
 
 
 const Alert = (props) => {
+    useMemo(() => [props, props.children]);
     return <AlertContainer className={`alert-cont alert-${props.type}`}>
         {props.children}
     </AlertContainer>
